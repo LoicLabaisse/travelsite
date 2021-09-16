@@ -7,6 +7,15 @@
   background-color: transparent;
 }
 
+.header.active{
+  background-color: var(--body-color) ;
+  box-shadow: 0 0 4px hsla(var(--hue-color), 64% ,15%, .15);
+}
+.nav__title.active,
+.navbar-burger.active{
+  color: var(--title-color);
+}
+
 .nav {
   height: 3rem;
   display: flex;

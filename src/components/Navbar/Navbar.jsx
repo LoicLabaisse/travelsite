@@ -7,16 +7,28 @@ import * as RiIcons from 'react-icons/ri';
 const Navbar = () => {
 
   const [showMenu, setShowMenu]= useState(false);
+  const [scroll,setScroll] = useState(false);
 
   const show = () =>{
     setShowMenu(!showMenu)
   }
 
+  const scrollHeader = () =>{
+    if(window.scrollY >= 100){
+      setScroll(true)
+    }
+    else{
+      setScroll(false)
+    }
+  }
+
+  window.addEventListener("scroll", scrollHeader)
+
   return (
     <div className="Navbar">
-      <header className="header" id="header">
+      <header className={scroll ? "header active" : "header"} id="header">
         <nav className="nav container">
-          <a href="#home" className="nav__title">
+          <a href="#home" className={scroll ? "nav__title active":"nav__title"}>
             Travel
           </a>
 
@@ -46,7 +58,7 @@ const Navbar = () => {
             <AiIcons.AiOutlineClose onClick={show} className="nav__close" id="nav-close" />
           </div>
 
-          <div className="navbar-burger">
+          <div className={scroll ? "navbar-burger active":"navbar-burger"}>
             <AiIcons.AiOutlineMenu onClick={show} />
           </div>
         </nav>

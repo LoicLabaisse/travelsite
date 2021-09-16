@@ -2,6 +2,9 @@ import React from "react";
 import Homephoto from "../../images/home1.jpg";
 import * as AiIcons from "react-icons/ai";
 import "./Home.css";
+import About from "../About/About";
+import Discover from "../Discover/Discover";
+import Video from "../Video/Video";
 
 const Home = () => {
   return (
@@ -45,6 +48,15 @@ const Home = () => {
                 <div href="#skills" className="home__scroll"></div>
             </a>
         </div>
+      </section>
+      <section className="about section" id="about">
+        <About/>
+      </section>
+      <section className="discover section" id="discover">
+        <Discover/>
+      </section>
+      <section className="video section">
+          <Video/>
       </section>
     </div>
   );
