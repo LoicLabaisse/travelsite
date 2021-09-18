@@ -6,7 +6,7 @@ import * as AiIcons from 'react-icons/ai';
 
 const Video = () => {
 
-    const [play,setPlay] = useState(false)
+    const [play,setPlay] = useState(true)
     const videoPLay = useRef(null)
     const playPause = () =>{
         setPlay(!play)

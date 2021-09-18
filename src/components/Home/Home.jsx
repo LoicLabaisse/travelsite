@@ -5,6 +5,7 @@ import "./Home.css";
 import About from "../About/About";
 import Discover from "../Discover/Discover";
 import Video from "../Video/Video";
+import Places from "../Places/Places";
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
         <img src={Homephoto} alt="travel boat" className="home__img" />
         <div className="home__container container grid">
           <div className="home__data">
-            <span className="home__data-subtitle">Découvrir un lieux</span>
+            <span className="home__data-subtitle">Découvrir un lieu</span>
             <h1 className="home__data-title">
               Explorer Les <br /> Plus Belles <br /> Plages
             </h1>
@@ -44,8 +45,8 @@ const Home = () => {
               <AiIcons.AiOutlineTwitter />
             </a>
           </div>
-            <a href ="#home">
-                <div href="#skills" className="home__scroll"></div>
+            <a href ="#about">
+                <div  className="home__scroll"></div>
             </a>
         </div>
       </section>
@@ -57,6 +58,9 @@ const Home = () => {
       </section>
       <section className="video section">
           <Video/>
+      </section>
+      <section className="places section">
+        <Places/>
       </section>
     </div>
   );

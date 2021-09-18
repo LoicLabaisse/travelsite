@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="about__container container grid">
       <div className="about__data">
-        <h2 className="section__title about__title">
+        <h2 className="section__title about__title" id="about_title">
           Plus D'Informations <br /> A Propos Des Meilleurs Plages
         </h2>
         <p className="about__description">
